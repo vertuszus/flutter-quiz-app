@@ -1,3 +1,8 @@
+Кроссплатформенное приложение-опрос на языке Dart и фреймворке Flutter 
+
+Запускать лучше всего в xCode для iPhone 11.
+
+Функционал будет обновляться.
 # flutter_application_2
 
 A new Flutter project.

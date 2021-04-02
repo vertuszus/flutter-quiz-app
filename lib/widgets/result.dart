@@ -14,14 +14,14 @@ class Result extends StatelessWidget {
     Widget img;
 
     if (0 <= count && count <= 3) {
-      msg = 'Темная сторона \n не для тебя, дружок. Ты слишком хорош!';
-      img = Image.asset('assets/images/good.jpeg');
+      msg = 'Низкий результат. Необходимо повторить материал';
+      img = Image.asset('assets/images/low.jpg');
     } else if ((4 <= count && count <= 7)) {
-      msg = 'Совсем чуть-чуть до цели!';
-      img = Image.asset('assets/images/normal .png');
+      msg = 'Средний результат. Попробуйте пройти тест заново';
+      img = Image.asset('assets/images/medium.jpg');
     } else {
-      msg = 'Поздравляем, ты нечисть во плоти!';
-      img = Image.asset('assets/images/bad.png');
+      msg = 'Поздравляем, тест пройден успешно!';
+      img = Image.asset('assets/images/high.jpg');
     }
 
     return Container(
@@ -42,9 +42,8 @@ class Result extends StatelessWidget {
         borderRadius: BorderRadius.circular(30.0),
         gradient: LinearGradient(
           colors: <Color>[
-            Color(0xFF5337ff),
-            Color(0xFF8131ff),
-            Color(0xFFbd27ff),
+            Colors.indigo,
+            Colors.indigoAccent,
           ],
         ),
       ),
@@ -67,20 +66,20 @@ class Result extends StatelessWidget {
           ),
 
           Divider(
-            color: Colors.white,
+            color: Colors.black,
           ),
           Text(
-            'Верно ответил на $count из $total',
+            'Вы ответили верно на $count из $total вопросов',
           ),
           Divider(
-            color: Colors.white,
+            color: Colors.black,
           ),
 
           // ignore: deprecated_member_use
           FlatButton(
             child: Text(
-              'Пройти еще раз',
-              style: TextStyle(fontSize: 22.0, color: Colors.white),
+              'Пройти тест еще раз',
+              style: TextStyle(fontSize: 24.0, color: Colors.white),
             ),
             onPressed: onClearState,
           ),

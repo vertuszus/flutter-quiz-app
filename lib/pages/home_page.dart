@@ -25,10 +25,10 @@ class _HomePageState extends State<HomePage> {
 
   void _onChangeAnswer(bool isCorrect) => setState(() {
         if (isCorrect) {
-          _icons.add(Icon(Icons.brightness_1, color: Color(0xFFbd27ff)));
+          _icons.add(Icon(Icons.brightness_1, color: Colors.greenAccent));
           _countResult++;
         } else {
-          _icons.add(Icon(Icons.brightness_1, color: Color(0xFF000000)));
+          _icons.add(Icon(Icons.brightness_1, color: Colors.redAccent));
         }
 
         _questionIndex += 1;
@@ -41,40 +41,42 @@ class _HomePageState extends State<HomePage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-        // appBar: AppBar(title: Text('Тестирование')),
-        body: SafeArea(
-      child: DefaultTextStyle.merge(
+      body: DefaultTextStyle.merge(
         style: whiteTextStyle,
         child: Container(
           constraints: BoxConstraints.expand(),
           decoration: BoxDecoration(
               color: const Color(0xff2a375a),
               image: DecorationImage(
-                image: AssetImage('assets/images/bg.jpeg'),
+                image: AssetImage('assets/images/bg4.jpg'),
+                colorFilter: new ColorFilter.mode(
+                    Colors.black.withOpacity(0.4), BlendMode.dstATop),
                 fit: BoxFit.cover,
               )),
-          child: Column(
-            children: <Widget>[
-              ProgressBar(
-                icons: _icons,
-                count: _questionIndex,
-                total: data.questions.length,
-              ),
-              _questionIndex < data.questions.length
-                  ? Quiz(
-                      index: _questionIndex,
-                      questionData: data,
-                      onChangeAnswer: _onChangeAnswer,
-                    )
-                  : Result(
-                      count: _countResult,
-                      total: data.questions.length,
-                      onClearState: _clearState,
-                    )
-            ],
+          child: SafeArea(
+            child: Column(
+              children: <Widget>[
+                ProgressBar(
+                  icons: _icons,
+                  count: _questionIndex,
+                  total: data.questions.length,
+                ),
+                _questionIndex < data.questions.length
+                    ? Quiz(
+                        index: _questionIndex,
+                        questionData: data,
+                        onChangeAnswer: _onChangeAnswer,
+                      )
+                    : Result(
+                        count: _countResult,
+                        total: data.questions.length,
+                        onClearState: _clearState,
+                      )
+              ],
+            ),
           ),
         ),
       ),
-    ));
+    );
   }
 }

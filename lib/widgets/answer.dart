@@ -30,9 +30,8 @@ class Answer extends StatelessWidget {
             ],
             borderRadius: BorderRadius.circular(5.0),
             gradient: LinearGradient(colors: [
-              Color(0xFF5337ff),
-              Color(0xFF8131ff),
-              Color(0xFFbd27ff),
+              Colors.indigo,
+              Colors.indigoAccent,
             ])),
         child: Text(
           title,

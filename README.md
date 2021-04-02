@@ -1,12 +1,10 @@
 Кроссплатформенное приложение-опрос на языке Dart и фреймворке Flutter 
 
-Запускать лучше всего в xCode для iPhone 11.
+<img width="287" alt="Снимок экрана 2021-04-02 в 18 05 46" src="https://user-images.githubusercontent.com/72495167/113428039-c14cf100-93de-11eb-8663-da2cda980314.png">
 
-Функционал будет обновляться.
+<img width="297" alt="Снимок экрана 2021-04-02 в 18 06 06" src="https://user-images.githubusercontent.com/72495167/113428046-c3af4b00-93de-11eb-8d37-f96254efd176.png">
 
-<img width="275" alt="Снимок экрана 2021-03-31 в 01 44 53" src="https://user-images.githubusercontent.com/72495167/113066567-668b7d80-91c3-11eb-929d-2e687392fe75.png">
-
-<img width="275" alt="Снимок экрана 2021-03-31 в 01 45 02" src="https://user-images.githubusercontent.com/72495167/113066570-68edd780-91c3-11eb-9b9e-46bf949a0415.png">
+<img width="289" alt="Снимок экрана 2021-04-02 в 18 06 20" src="https://user-images.githubusercontent.com/72495167/113428066-c9a52c00-93de-11eb-9a59-a697fa8bad23.png">
 
 # flutter_application_2
 
